@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>component</title>
+</head>
+
+<body>
+    <div id='root'></div>
+    <div id='content'></div>
+
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <script type='text/babel'>
+        function MyComponent1() {
+            return (
+                <h1>
+                    <ul>
+                        <li>天上</li>
+                        <li>天下</li>
+                        <li>唯我</li>
+                        <li>独尊</li>
+                    </ul>
+                </h1>
+            )
+        }
+        ReactDOM.render(<MyComponent1 />, document.getElementById('root'))
+
+        class MyComponent2 extends React.Component {
+            render() {
+                return <div>
+                    <span>你还好嘛</span>
+                    <p>原谅我这该死的,又无处安放的魅力啊</p>
+                </div>
+            }
+        }
+        ReactDOM.render(<MyComponent2 />, document.getElementById('content'))
+    </script>
+
+</body>
+
+</html>

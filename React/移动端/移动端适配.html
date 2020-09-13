@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        div{
+            width:15rem;
+            height:15rem;
+            float:left;
+        }
+        .box1{
+            background:blue;
+        }
+        .box2{
+            background:green;
+        }
+        .box3{
+            background:yellow;
+        }
+        .box4{
+            background:purple;
+        }
+    </style>
+</head>
+<body>
+    <div class='box1'>111</div>
+    <div class='box2'>222</div>
+    <div class='box3'>333</div>
+    <div class='box4'>444</div>
+    <script>
+        function setRem(){
+            const width=document.documentElement.clientWidth;
+            document.documentElement.style.fontSize=width / 100 +'px';
+        }
+        window.onreset=function(){
+            setRem();
+        }
+        setRem()
+    </script>
+</body>
+</html>

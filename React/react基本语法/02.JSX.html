@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .blue{
+            color:blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='root'></div>
+    <div id='timi'></div>
+
+    <script src='../js/react.development.js'></script>
+    <script src='../js/react-dom.development.js'></script>
+    <script src='../js/babel.min.js'></script>
+    <script type='text/babel'>
+
+        const morning = <h1 className={'red'}>早餐人生的一半</h1>
+        ReactDOM.render(morning, document.getElementById('root'))
+
+        const str=React.createElement('span',{className:'blue',id:'aa'},'念念不忘,必有回响')
+        ReactDOM.render(str,document.getElementById('timi'))
+    </script>
+
+</body>
+
+</html>
